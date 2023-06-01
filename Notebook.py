@@ -63,4 +63,9 @@ entry_to_remove = input("Введите имя записи, которую ну
 for entry in directory.entries:
     if entry.name == entry_to_remove:
         directory.remove_entry(entry)
+        print("Запись успешна удалена!")
         break
+        
+print("Все записи:")
+for entry in directory.entries:
+    print(f"Имя: {entry.name}, Фамилия: {entry.surname}, Дата рождения: {entry.date_of_birth}, Телефон: {entry.phone_number}")
