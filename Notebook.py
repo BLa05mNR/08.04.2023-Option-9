@@ -55,6 +55,12 @@ if results:
 else:
     print("Подходящие записи не найдены.")
 
+entry_to_remove = input("Введите имя записи, которую нужно удалить: ")
+for entry in directory.entries:
+    if entry.name == entry_to_remove:
+        directory.remove_entry(entry)
+        break
+
 print("Все записи:")
 for entry in directory.entries:
     print(f"Имя: {entry.name}, Фамилия: {entry.surname}, Дата рождения: {entry.date_of_birth}, Телефон: {entry.phone_number}")
